@@ -2,14 +2,17 @@
 
 The following web application was built using, Laravel, Vue and MySQL
 
+### Instructions to Run The Application with Docker
 
-### Instructions to Run The Application
+1.  Clone the repository:
 
-1.Clone the repository: git clone https://github.com/Priom7/Laravel-Vue-MySQL-Task.git
+            git clone https://github.com/Priom7/Laravel-Vue-MySQL-Task.git
 
-2. Change Diroctory into App: cd employee-app
+2.  Change Diroctory into App:
 
-3. Setup .env file: 
+            cd employee-app
+
+3.  Setup .env file:
 
             DB_CONNECTION=mysql
             DB_HOST=mysql
@@ -18,21 +21,34 @@ The following web application was built using, Laravel, Vue and MySQL
             DB_USERNAME=sail
             DB_PASSWORD=password
 
-4. Create Alias for sail command: alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+4.  Create Alias for sail command:
 
-3. Run Docker Container: sail up
+            alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
-4. Get into Container directory: docker exec -it employee-app-laravel.test-1 /bin/bash
+5.  Run Docker Container:
 
-5. Install dependecies for vue JS: npm install
+            sail up
 
-6. Migrate and Seed Database:  php artisan migrate:refresh —seed
+6.  Get into Container directory:
 
-7.Run Dev for Frontend: Npm run dev
+            docker exec -it employee-app-laravel.test-1 /bin/bash
 
-8. Exit Container: Exit
-9. Stop Container: sail down
+7.  Install dependecies for vue JS:
 
+            npm install
 
+8.  Migrate and Seed Database:
 
+            php artisan migrate:refresh —seed
 
+9.  Run Dev for Frontend:
+
+            npm run dev
+
+10. Exit Container:
+
+            exit
+
+11. Stop Container:
+
+            sail down
