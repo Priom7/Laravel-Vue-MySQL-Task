@@ -27,7 +27,7 @@ The following web application was built using, Laravel, Vue and MySQL
 
 5.  Run Docker Container:
 
-            sail up
+            sail up -d
 
 6.  Get into Container directory:
 
