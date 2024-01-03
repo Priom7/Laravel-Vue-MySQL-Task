@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\DataProviderController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/get-data', [DataProviderController::class, 'provider']);
+Route::post('/data-entry', [EmployeeController::class, 'action']);
